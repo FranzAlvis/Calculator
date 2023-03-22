@@ -30,7 +30,7 @@ export const Prueba2 = () => {
       <Grid item xs={12}>
         <TextField
           value={pantalla}
-          // onChange={(event) => setInput(event.target.value)}
+
           variant="outlined"
           fullWidth
         />
