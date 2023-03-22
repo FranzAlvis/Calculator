@@ -1,8 +1,8 @@
 import { Button, Grid, TextField } from "@mui/material";
 import { useState } from "react";
 
-export const Prueba2 = () => {
-  const [pantalla, setPantalla] = useState<any>("");
+export const CalculadoraFuncional = () => {
+  const [pantalla, setPantalla] = useState("");
 
   const click = (tecla: string) => {
     setPantalla(pantalla + tecla);
@@ -15,10 +15,10 @@ export const Prueba2 = () => {
   const calcular = () => {
     try {
       const resultado = eval(pantalla);
-      if(resultado == Infinity){
-        setPantalla("No se puede dividir entre 0")
-      }else{
-        setPantalla(parseFloat(resultado.toString()));
+      if (resultado == Infinity) {
+        setPantalla("No se puede dividir entre 0");
+      } else {
+        setPantalla(resultado.toString());
       }
     } catch (error) {
       setPantalla("Error");
@@ -29,8 +29,10 @@ export const Prueba2 = () => {
     <Grid container rowSpacing={2} justifyContent="center" alignItems="center">
       <Grid item xs={12}>
         <TextField
+          sx={{
+            backgroundColor: "#adddf3",
+          }}
           value={pantalla}
-
           variant="outlined"
           fullWidth
         />
@@ -178,6 +180,13 @@ export const Prueba2 = () => {
       <Grid item xs={3}>
         <Button
           variant="contained"
+          sx={{
+            backgroundColor: "#812805",
+            color: "#ffffff",
+            "&:hover": {
+              backgroundColor: "#ff7043",
+            },
+          }}
           onClick={() => {
             clear();
           }}
