@@ -29,11 +29,12 @@ export const CalculadoraFuncional = () => {
     <Grid container rowSpacing={2} justifyContent="center" alignItems="center">
       <Grid item xs={12}>
         <TextField
+          id="outlined-basic"
           sx={{
             backgroundColor: "#adddf3",
           }}
           value={pantalla}
-          variant="outlined"
+          variant="outlined"  
           fullWidth
         />
       </Grid>
